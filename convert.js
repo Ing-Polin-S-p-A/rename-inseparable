@@ -22,10 +22,9 @@ fs.readdir(path, function (err, files) {
         });
 
 
-        let newFile = fs.createWriteStream(path + '/new-' + element);
+        let newFile = fs.createWriteStream('./converted/new-' + element);
 
-        fs.writeFileSync(path + '/new-' + element, newFileArray.join('\n'));
-
+        fs.writeFileSync( './converted/new-' + element, newFileArray.join('\n'));
 
     });
 });
