@@ -1,13 +1,19 @@
 const fs = require('fs');
-const path = './steps';
 
-fs.readdir(path, function (err, files) {
+let argv = require('minimist')(process.argv.slice(2));
 
+const source = (undefined != argv.s) ? argv.s : './steps';
+const dest = (undefined != argv.d) ? argv.d : './converted/';
+
+fs.readdir(source, function (err, files) {
+    if (err) {
+        console.log(err.message)
+    } else {
     files.forEach(element => {
         console.log(element)
         let newFileArray = []; 
 
-        const allFileContents = fs.readFileSync(path + '/' + element, 'utf-8');
+        const allFileContents = fs.readFileSync(source + '/' + element, 'utf-8');
         allFileContents.split(/\r?\n/).forEach(line => {
             
             let code = element.replace('.stp', '')
@@ -22,9 +28,17 @@ fs.readdir(path, function (err, files) {
         });
 
 
-        let newFile = fs.createWriteStream('./converted/new-' + element);
+        let newFile = fs.createWriteStream(dest + 'new-' + element);
 
+        try {
         fs.writeFileSync( './converted/new-' + element, newFileArray.join('\n'));
 
+        } catch {
+            console.log(err.log)
+        }
+
     });
+    }
+
+
 });
