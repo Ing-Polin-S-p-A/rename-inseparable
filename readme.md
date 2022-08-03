@@ -17,7 +17,7 @@ the following optional parameters are present:
 ```bash
 -s = modify the source folder (then steps)
 -d = change destination folder (then converted)
-```bash
+```
 
 this is an example:
 
