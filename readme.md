@@ -25,4 +25,4 @@ this is an example:
 node rename.js -s sorgente -d destinazione
 ```
 
-This example rename the steps located into `sorgente` folder in `destinazione` folder.
+This example rename the steps located from `sorgente` folder into `destinazione` folder.
