@@ -14,8 +14,8 @@ this command renames the childs elements of the drawings in step format containe
 
 the following optional parameters are present:
 
--s = modify the source folder (then steps)
--d = change destination folder (then converted)
+- -s = modify the source folder (then steps)
+- -d = change destination folder (then converted)
 
 this is an example:
 
