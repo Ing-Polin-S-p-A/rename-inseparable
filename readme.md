@@ -1,6 +1,6 @@
 # Rename Inseparable 
 
-this simple script allows you to rename "child" components in one step.
+this simple script allows you to rename "child" components in one step. The script is useful if you are using PTC's Model Manager.
 
 the script is written in nodejs. You must have nodejs installed on your PC. Please install node with the instructions from [node documentation](https://nodejs.org/it/download/).
 
@@ -14,8 +14,10 @@ this command renames the childs elements of the drawings in step format containe
 
 the following optional parameters are present:
 
-- -s = modify the source folder (then steps)
-- -d = change destination folder (then converted)
+```bash
+-s = modify the source folder (then steps)
+-d = change destination folder (then converted)
+```bash
 
 this is an example:
 
